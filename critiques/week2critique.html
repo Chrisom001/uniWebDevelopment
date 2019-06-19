@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!--- CSS Stylesheet Link --->
+	<link rel="stylesheet" href="../css/style.css">
+	
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <?php include scripts/header.php; ?>
+    <title>Week 2 - Critique</title>
+  </head>
+  <body>
+    <nav class = "navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="../index.php">FoxCo Gaming Newsletter</a>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<h2>Week 2 - Database Design</h2>
+			<p>
+				In my database design I tried to streamline it as much as possible although as there can be multiple sections of text I decided to split them off into subheadings within the articles table. By setting all but the initial one as optional, if there is a story that has just broken, it can be added to the site without a full set of text. For the other tables, there is just the basic information required for it to function.
+			</p>
+			
+			<p>
+				The design meets 3NF as each of the tables only has information relating to the primary key within it and doesn’t hold extra eg.
+			</p>
+			
+			<p>
+				In the user details, the only details that are held are the username, first and last name and the role of a user which all tie in with the primary key which is the userID.
+			</p>
+			
+			<p>
+				Within the comments, besides the foreign keys which are the userID and articleID (To allow joins and such to work and to identify which comment belongs where) it only records the content and the time that it was posted which all relate.
+			</p>
+			
+			<p>
+				Finally with the article table, there are a number of sub-sections such as “content2” but these are all part of the article in case it is fairly large and is broken up with images. This will allow the content to flow better within the pages as it can be organised much better in smaller blocks, rather than throwing the entire article onto the page at once. I believe this is suitable as each column will be dependant on the primary key and breaking it down further won’t be of benefit as if we delete the article, we want all of the content gone.
+			</p>
+			
+			<img src="../img/dbImage.PNG" alt="database_layout">
+			
+			<p>
+				When creating a summary, I will want a user to enter this separately instead of generating it from the article text as this will give the user posting some freedom to put a unique summary in which may get a users attention better, rather than it being the first line or two of the article. This means that an end user is more likely to stay on the site than just go elsewhere for their news. 
+			</p>
+		</div>
+	</div>
+	</br></br></br>
+	<div class="footer">
+		<div class="container">
+			<p>Created by Christopher Wilkinson </br>
+			Weekly Critiques: <a href="week1critique.html">1</a> | 
+			<a href="week2critique.html">2</a> | 
+			<a href="week3critique.html">3</a> | 
+			<a href="week4critique.html">4</a> | 
+			<a href="week5critique.html">5</a> |  
+			<a href="week6critique.html">6</a> | 
+			<a href="week7critique.html">7</a> | 
+			<a href="week8critique.html">8</a> | 
+			<a href="week9critique.html">9</a> |  
+			<a href="week10critique.html">10</a> | 
+			<a href="week11critique.html">11</a> | 
+			<a href="week12critique.html">12</a></br>
+			Email: <a href="mailto:1605458@abertay.ac.uk">1605458@abertay.ac.uk</a></p>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

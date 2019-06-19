@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!--- CSS Stylesheet Link --->
+	<link rel="stylesheet" href="../css/style.css">
+	
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <?php include scripts/header.php; ?>
+    <title>Week 4 - Critique</title>
+  </head>
+  <body>
+    <nav class = "navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="../index.php">FoxCo Gaming Newsletter</a>
+	</nav>
+	<div class="container">
+		<h2>Week 4 - Login/Register Security</h2>
+		<p>
+		The first feature of the login/register system which adds in an element of security is that data when the user is registering any empty space at the beginning or end of the input string is trimmed. More importantly however it is run through a strip_tags which removes a large majority of HTML, PHP and XML tags from the input string. This means that it’ll be harder for users to input code which could cause harm to the program itself or the database, as well as if the data is utilised after being taken from the database.
+		</p>
+		
+		<p>
+		Another important security feature is prepared statements have been used within any queries which involve using any user input with the database. This is because if they were able to add anything extra to a query such as “105 OR 1=1” which would always be true. This is called SQL Injection and is one of the most common attack variants. The prepared statements protect against this as the values are put into the query after it’s “prepared” so it wouldn’t read the code in its entirety. Another part of this feature was strip slashes and html special character removal. These are important as the html special character feature allows nonstandard characters to be put into the database in an ASCII format rather than standard. This means that if they were to be used to try and attack the database, they’d be in a form which wouldn’t cause a problem as when the SQL was read, it would see “/” as “&#47;” Finally when the input is put through the Strip slashes option, it looks for any forward or backslashes and removes these from the strings. This means that they can’t be used as part of an attack as well.
+		</p>
+		<p>
+		Additionally, when registering and logging in the password the user enters is run through a SHA256 hash. This is to prevent it from being easily read if the database were to be breached and the usernames and passwords were stolen. This is important as with the SALT that is applied to them, if a user reuses passwords then none of their other accounts are immediately compromised as it will take a hacker a significant amount of time to break the encryption.
+		</p>
+		<p>
+		The final security feature is when a user fails to logon correctly, instead of telling them what is wrong it simply tells the user than the username or password is incorrect. This is important as if a hacker knew if they had one of the options correct, then it would allow them to focus on the other making their attempt to break into the system much more likely to succeed. 
+		</p>
+	</div>
+	</br></br></br>
+	<div class="footer">
+		<div class="container">
+			<p>Created by Christopher Wilkinson </br>
+			Weekly Critiques: <a href="week1critique.html">1</a> | 
+			<a href="week2critique.html">2</a> | 
+			<a href="week3critique.html">3</a> | 
+			<a href="week4critique.html">4</a> | 
+			<a href="week5critique.html">5</a> |  
+			<a href="week6critique.html">6</a> | 
+			<a href="week7critique.html">7</a> | 
+			<a href="week8critique.html">8</a> | 
+			<a href="week9critique.html">9</a> |  
+			<a href="week10critique.html">10</a> | 
+			<a href="week11critique.html">11</a> | 
+			<a href="week12critique.html">12</a></br>
+			Email: <a href="mailto:1605458@abertay.ac.uk">1605458@abertay.ac.uk</a></p>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

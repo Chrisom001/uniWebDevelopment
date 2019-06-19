@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!--- CSS Stylesheet Link --->
+	<link rel="stylesheet" href="../css/style.css">
+	
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <?php include scripts/header.php; ?>
+    <title>Week 10 - Critique</title>
+  </head>
+  <body>
+    <nav class = "navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="../index.php">FoxCo Gaming Newsletter</a>
+	</nav>
+	<div class="container">
+		<h1>Week 10 - XML</h1>
+		<p>When looking at adding an RSS Feed to the site, I found during research that creating one is a fairly simple task as it’s simply an XML document and it can be updated manually with ease, although for sites which have grown in size it is generally recommended to use an automated creator if there are a lot of new articles in a short time. Another major factor when considering the implementation of RSS is that in recent years it’s use has been declining as only Internet Explorer remains the only browser to support it naturally as Mozilla removed native support from Firefox earlier this year.[1]</p>
+
+		<p>One advantage of an RSS feed is that it can make it much easier for users to be able to see what articles are available without necessarily having to visit the site which could improve traffic as well as it being in an easy to read format so they can browse it faster.</p>
+
+		<p>The alternative to RSS is called Atom which is newer and was designed to deal with some of the shortcomings of RSS. It has grown and has been adopted by a few companies as their preferred method but in others they do still use RSS or at times, the term RSS has become synonymous with both of them together.</p>
+
+		<p>On the newsletter website, RSS 2.0 has been used in order to provide a list of the articles with as much relevant information as possible within it. The XML file was created using notepad++ which made it possible to ensure that each of the tags was properly in place. Due to the simplicity of the XML format, updating the list shouldn’t be difficult.</p>
+
+		<p>Finally displaying those results was more difficult as it required the use of simpleXML in order to read the XML file into the PHP document. In order to get access to each of the records they each had to be parsed into a string before being displayed.</p>
+
+
+		[1] https://www.bleepingcomputer.com/news/software/mozilla-to-remove-support-for-built-in-feed-reader-from-firefox/
+
+	</div>
+	</br></br></br>
+	<div class="footer">
+		<div class="container">
+			<p>Created by Christopher Wilkinson </br>
+			Weekly Critiques: <a href="week1critique.html">1</a> | 
+			<a href="week2critique.html">2</a> | 
+			<a href="week3critique.html">3</a> | 
+			<a href="week4critique.html">4</a> | 
+			<a href="week5critique.html">5</a> |  
+			<a href="week6critique.html">6</a> | 
+			<a href="week7critique.html">7</a> | 
+			<a href="week8critique.html">8</a> | 
+			<a href="week9critique.html">9</a> |  
+			<a href="week10critique.html">10</a> | 
+			<a href="week11critique.html">11</a> | 
+			<a href="week12critique.html">12</a></br>
+			Email: <a href="mailto:1605458@abertay.ac.uk">1605458@abertay.ac.uk</a></p>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

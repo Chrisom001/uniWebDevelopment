@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!--- CSS Stylesheet Link --->
+	<link rel="stylesheet" href="../css/style.css">
+	
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <?php include scripts/header.php; ?>
+    <title>Week 3 - Critique</title>
+  </head>
+  <body>
+    <nav class = "navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="../index.php">FoxCo Gaming Newsletter</a>
+	</nav>
+	<div class="container">
+		<h2>Week 3 - APIs</h2>
+		<p>I implemented an API to the Article database table by using the MVC framework to a degree by separating this off into another folder. Prior to creating the API I used procedural MYSQL queries to pull information from the database to the program. While working on the API, I was able to change this to an object orientated PDO style like what is below. Because the program itself only depended on the output, it meant the backend change had no affect on the front end.</p> 
+		<code>
+		function getArticleById($id)
+		{
+			global $pdo;
+			$readArtByID = "SELECT * FROM GW_Articles WHERE articleID = '$id' LIMIT 1";
+
+			$readArticlesQuery = $pdo -> query($readArtByID);
+			$readArticles = $readArticlesQuery -> fetchAll(PDO::FETCH_OBJ);
+		
+			return json_encode($readArticles);
+		}  
+		</code>
+	<p>Using an API within a web based project is definitely beneficial as the main use is to make it easier to be able to change database or how the information is pulled from the database. This means that the change from MYSQL to PDO was much easier because the only thing I had to consider from the websites perspective was the data that it was expecting, rather than having to change entire sections of code on the site. 
+	It also makes the code cleaner as all of the SQL queries are stored within a single location and if you do have multiple sections of code which can use the same query, then you’re not repeating code which is not a positive thing when trying to write in a more object orientated way. It also means if someone is trying to find an error within the code, it can be easier to locate this.
+	The final reason why the API is beneficial for the program is from a security point of view. It’s much easier to build checks and security into the system if the database isn’t tied directly to the program and it’s simply passing information between the two. This is because it is clearer when prepared statements are used, but also before passing information through to the API, it can be run through special character removers and other security checks.</p>
+	
+	</div>
+	</br></br></br>
+	<div class="footer">
+		<div class="container">
+			<p>Created by Christopher Wilkinson </br>
+			Weekly Critiques: <a href="week1critique.html">1</a> | 
+			<a href="week2critique.html">2</a> | 
+			<a href="week3critique.html">3</a> | 
+			<a href="week4critique.html">4</a> | 
+			<a href="week5critique.html">5</a> |  
+			<a href="week6critique.html">6</a> | 
+			<a href="week7critique.html">7</a> | 
+			<a href="week8critique.html">8</a> | 
+			<a href="week9critique.html">9</a> |  
+			<a href="week10critique.html">10</a> | 
+			<a href="week11critique.html">11</a> | 
+			<a href="week12critique.html">12</a></br>
+			Email: <a href="mailto:1605458@abertay.ac.uk">1605458@abertay.ac.uk</a></p>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

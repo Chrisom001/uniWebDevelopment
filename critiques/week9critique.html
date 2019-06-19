@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!--- CSS Stylesheet Link --->
+	<link rel="stylesheet" href="../css/style.css">
+	
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <?php include scripts/header.php; ?>
+    <title>Week 9 - Critique</title>
+  </head>
+  <body>
+    <nav class = "navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="../index.php">FoxCo Gaming Newsletter</a>
+	</nav>
+	<div class="container">
+		<h2>Week 9 - Internet of Things (Week 3)</h2>
+		<p>When looking at the best ways to be able to display the collected data on screen for users to be able to view, especially using JQuery mobile it was decided that using a table would be the best way to do this. This is because it becomes easier to show complex data in a clear format, with the last ten results being used to populate this. </p>
+		
+		<p>This was done by installing the Jquery mobile pre-requisites and looking at the examples they had available on their site for tables. As part of this the best one for mobiles was one where a user could filter what columns they wanted to view. Due to the number of variables covered in the database, this seemed perfect for this part of the project. This was because as this was targeted towards the mobile aspect, the ability to hide or show columns would allow people with limited space, to be able to see only what they actually needed, rather than be forced to view every piece of data.</p>
+		
+		<p>In order to get this working, the initial table elements were created and put into a variable to make it easier to display this later on. The data from the database was inserted into a variable, and then this was broken down further to get access to the json information stored within the sensorJson field within that. This data was then used within a for loop to create each individual line of the table.
+		While this choice of implementation can take up more space than collapsible tabs, or menus, it is much clearer with data being more readily available to provide a better user experience. </p>
+
+	</div>
+	</br></br></br>
+	<div class="footer">
+		<div class="container">
+			<p>Created by Christopher Wilkinson </br>
+			Weekly Critiques: <a href="week1critique.html">1</a> | 
+			<a href="week2critique.html">2</a> | 
+			<a href="week3critique.html">3</a> | 
+			<a href="week4critique.html">4</a> | 
+			<a href="week5critique.html">5</a> |  
+			<a href="week6critique.html">6</a> | 
+			<a href="week7critique.html">7</a> | 
+			<a href="week8critique.html">8</a> | 
+			<a href="week9critique.html">9</a> |  
+			<a href="week10critique.html">10</a> | 
+			<a href="week11critique.html">11</a> | 
+			<a href="week12critique.html">12</a></br>
+			Email: <a href="mailto:1605458@abertay.ac.uk">1605458@abertay.ac.uk</a></p>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

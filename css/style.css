@@ -1,0 +1,149 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 150px;
+}
+
+.articleContainer{
+	border: 1px solid black;
+	background-color: #C0C0C0;
+	width: auto;
+	height: auto;
+}
+
+.article{
+	position: relative;
+	height:80%;
+	width:100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+   height: 70px; 
+  background-color: #373d42;
+  color: white;
+}
+
+.navbar a { 
+color:white; 
+}
+
+.navbar {
+	color: white;
+}
+
+.comment{
+	border: 1px solid black;
+    border-radius: 5px;
+}
+
+.loginContainer{
+	height: auto;
+	width: auto;
+}
+
+.loginBox{
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: #bfbfbf;
+	height: 25%;
+	width: 25%;
+	margin: auto;
+}
+
+.registerContainer{
+	height: 80%;
+	width: auto;
+}
+
+.registerForm{
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: #bfbfbf;
+	height: 25%;
+	width: 25%;
+	margin: auto;
+}
+
+.subHeadline1{
+	color:black;
+	width: 100%;
+	height: 35%;
+	float: left;
+	position: relative;
+}
+
+.subHeadline2{
+	color:black;
+	width: 100%;
+	height: 35%;
+	float: left;
+	position: relative;
+}
+
+.subHeadline1 img, .subHeadline2 img{
+	width: 100%; 
+	height: 100%;
+}
+
+#articleHeadline{
+	color:black;
+	width: 100%;
+	height: 20%;
+	float: left;
+	position: relative;
+}
+
+#articleContent{
+	color:black;
+	width: 100%;
+	height: 10%;
+	float: left;
+	position: relative;
+}
+
+#subHeading1, #subHeading2{
+	color:black;
+	width: 100%;
+	height: 5%;
+	margin-right: auto;
+	margin-left: auto;
+	float: left;
+	position: relative;
+}
+
+#leftText{
+	color:black;
+	width: 55%;
+	height: 30%;
+	float: left;
+	position: relative;
+}
+
+#rightImage{
+	height: 30%;
+	width: 35%;
+	float: left;
+	position: relative;
+}
+
+#leftImage{
+	height: 30%;
+	width: 35%;
+	float: left;
+	position: relative;
+}
+
+#rightText{
+	color:black;
+	width: 55%;
+	height: 30%;
+	float: right;
+	position: relative;
+}

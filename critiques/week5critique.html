@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!--- CSS Stylesheet Link --->
+	<link rel="stylesheet" href="../css/style.css">
+	
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <?php include scripts/header.php; ?>
+    <title>Week 5 - Critique</title>
+  </head>
+  <body>
+    <nav class = "navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="../index.php">FoxCo Gaming Newsletter</a>
+	</nav>
+	<div class="container">
+		<h2>Week 5 - Article Input Security</h2>
+		<p>When it comes to the user inputting their articles into the database and finally onto the site there are several security precautions which have been put into place to protect these.</p>
+		
+		<p>Like the login system the first level of protection comes from sanitising the inputs given by the user. This is done by running through all their input through a number of filters to try and protect the site and the database from harm by any user who are unscrupulous. The main checks done are to trim the input, remove any special HTML characters, strip the slashes from the input and finally strip the tags from the input.</p>
+		
+		<p>The second level of security is to prevent just registered users from being able to add new articles to the site. This is done by each user being set at a basic level which when logging in, is set as part of the session. The site then looks at the data stored in the session and if they do have a contributor level set, it will show the “Add an article” option in the navbar. This is done through a simple if/else statement which has been tested with users of both authentication levels.</p>
+		
+		<p>Another security feature is during the image uploading. In order to make sure that the user isn’t inputting files which aren’t what they seem, the program checks all files that are being uploaded and to whether they are an image or not. If not, it will fail the upload and the user will be prompted to contact an administrator for assistance, as while this could be a mistake, it is something that would need to be investigated in more detail.</p>
+		
+		<p>The final check on images is to ensure that they aren’t greater than 0.5mb. This both ensures that images aren’t too big for the site and causing longer load times for users, especially those on slower connections but to stop people inputting images which could be loaded with viruses or that are other files masquerading as an image. If an image that is too large is uploaded, it will also fail and tell the user to contact an administrator to look into this form them.</p>
+
+	</div>
+	</br></br></br>
+	<div class="footer">
+		<div class="container">
+			<p>Created by Christopher Wilkinson </br>
+			Weekly Critiques: <a href="week1critique.html">1</a> | 
+			<a href="week2critique.html">2</a> | 
+			<a href="week3critique.html">3</a> | 
+			<a href="week4critique.html">4</a> | 
+			<a href="week5critique.html">5</a> |  
+			<a href="week6critique.html">6</a> | 
+			<a href="week7critique.html">7</a> | 
+			<a href="week8critique.html">8</a> | 
+			<a href="week9critique.html">9</a> |  
+			<a href="week10critique.html">10</a> | 
+			<a href="week11critique.html">11</a> | 
+			<a href="week12critique.html">12</a></br>
+			Email: <a href="mailto:1605458@abertay.ac.uk">1605458@abertay.ac.uk</a></p>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

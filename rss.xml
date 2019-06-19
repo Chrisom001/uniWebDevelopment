@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+    <channel>
+        <title>FoxCo Gaming Newsletter</title>
+        <url>https://mayar.abertay.ac.uk/~1605458/</url>
+        <description>This is a gaming newsletter providing up to date information on gaming news</description>
+        <language>en-us</language>
+        <copyright>Copyright (C) 2018 Abertay University</copyright>
+        <item>
+            <headline>Company of Heroes 2 is free right now!</headline>
+            <category>Technology</category>
+			<description>You have your orders.</description>
+			<createdOn>2018-12-09</createdOn>
+			<author>Chrisom</author>
+			<url>https://mayar.abertay.ac.uk/~1605458/displayArticle.php?id=47</url>
+        </item>
+        <item>
+            <headline>Fallout 76 - Better or Worse than ESO</headline>
+            <category>Technology</category>
+			<description>We've taken a look at the upcoming game from Bethesda to decide, does it look like it'll unseat their current MMORPG or if the player base is just completely different.</description>
+			<createdOn>2018-10-03</createdOn>
+			<author>Chrisom</author>
+			<url>https://mayar.abertay.ac.uk/~1605458/displayArticle.php?id=6</url>
+        </item>
+        <item>
+            <headline>Command and Conquer - Due for a return?</headline>
+            <category>Technology</category>
+			<description>It's been almost a decade since the last (good) game and we look at whether it's a time for Kane to return, or the Soviets to rise once more and bring this franchise back.</description>
+			<createdOn>2018-10-02</createdOn>
+			<author>Chrisom</author>
+			<url>https://mayar.abertay.ac.uk/~1605458/displayArticle.php?id=5</url>
+        </item>
+        <item>
+            <headline>Virtual Reality - Next best thing or Major flop?</headline>
+            <category>Technology</category>
+			<description>We decided to take a look at the current VR headsets and work out whether they are worth the cost of buying them, or if they are just the next fad which will fade away</description>
+			<createdOn>2018-10-01</createdOn>
+			<author>Chrisom</author>
+			<url>https://mayar.abertay.ac.uk/~1605458/displayArticle.php?id=4</url>
+        </item>
+        <item>
+            <headline>Battlefield 5 - Is the return to WW2 right?</headline>
+            <category>Technology</category>
+			<description>We've been looking over the latest details for battlefield 5 and we're trying to decide whether the return to World War 2 is the right move?</description>
+			<createdOn>2018-09-25</createdOn>
+			<author>Chrisom</author>
+			<url>https://mayar.abertay.ac.uk/~1605458/displayArticle.php?id=3</url>
+        </item>
+        <item>
+            <headline>GTA Online players - Friends or Foe?</headline>
+            <category>Technology</category>
+			<description>When you go on GTA Online you'll always come across other players, but we decided to look at how often they turned out to be friendly.</description>
+			<createdOn>2018-09-24</createdOn>
+			<author>Chrisom</author>
+			<url>https://mayar.abertay.ac.uk/~1605458/displayArticle.php?id=2</url>
+        </item>
+    </channel>
+</rss>
